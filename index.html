@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shokaivps</title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <h1>Yasuko Tatebayashi Portfolio</h1>
+        <!-- ナビゲーション -->
+        <nav class="header-nav">
+            <ul>
+                <li><a href="#profile">自己紹介</a></li>
+                <li><a href="#work">仕事内容紹介</a></li>
+                <li><a href="#address">連絡先</a></li>
+                <li><a href="#goiken">ご意見</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- 自己紹介 -->
+        <p id="profile"></p>
+        <section id="profiles" class="container">
+            <p id="my-photo"><img src="images/jinbutu9.png" alt="顔写真"></p>
+            <h2>自己紹介</h2>
+            <div class="profile-contents">
+                <h3>氏名:　舘林　康子</h3>
+                <h3>使用言語:HTML&CSS/PHP/MySQL/JavaScript</h3>
+                <p>現在、事務の仕事と並行しながら、上記のプログラミングの仕事を実施しています。<br>
+                    このため、週7~8時間以内で対応できる業務にて受付しています。<br>
+                    よろしくお願いします。
+                </p>
+            </div>
+        </section>
+        <!-- 仕事内容紹介 -->
+        <p id="work"></p>
+        <section id="works" class="container">
+            <h2>仕事内容紹介</h2>
+            <div class="works-grid">
+                <div class="work-contents">
+                    <img src="images/gazou12.png" alt="デザイン">
+                    <h3>HTML&CSSコーディング</h3>
+                        <p>提出されたプログラミング内容を基に、<br>週末7~8時間以内でできる内容にて制作します。</p>
+                </div>
+                <div class="work-contents">
+                    <img src="images/gazou11.png" alt="ランディングページ">
+                    <h3>ランディングページ</h3>
+                        <p>簡潔な内容であれば、最速で3~4時間、<br>
+                        平均で7~8時間にて制作します。</p>
+                </div>
+                <div class="work-contents">
+                    <img src="images/gazou10.png" alt="ホームページ">
+                    <h3>HTML&CSSのみのホームページ制作</h3>
+                    <p>5ページ以内のホームページであれば、デザインも含め制作します。<br>
+                    2週間程度で制作します。多少お時間がかかる旨ご留意願います。</p>
+                </div>
+            </div>
+        </section>
+        <p id="address"></p>
+        <section id="address-contents" class="container">
+            <h2>連絡先</h2>
+            <p>メールアドレス: yasuko0981@yahoo.co.jp<br>
+            電話番号: 090-7173-9061</p>
+            <a href="https://shokai-test.herokuapp.com/">
+                <p id="my-icon"><img src="images/github (3).png" alt="git"></p>
+            </a>
+        </section>
+        <p id="goiken"></p>
+        <section id="goiken-contents" class="container">
+            <h2>ご意見</h2>
+            <form method="POST" action="check2.php">
+                <div class="name-d">
+                    氏名<br>
+                    <input type="text" name="name" placeholder="氏名">
+                </div>
+                <div class="name-d">
+                    Email<br>
+                    <input type="text" name="email" placeholder="Email">
+                </div>
+                <div class="name-d">
+                    電話番号　記入例：09012345678<br>
+                    <input type="text" name="phone" placeholder="電話番号">
+                </div>
+                <div class="name-d">
+                    郵便番号<br>
+                    <input type="text" name="postal1" placeholder="000">-
+                    <input type="text" name="postal2" placeholder="0000">
+                </div>
+                <div class="name-d">
+                    住所<br>
+                    <input type="text" name="address" placeholder="住所">
+                </div>
+                <div class="name-d">
+                    性別<br>
+                    <input type="radio" name="gendar" value="ladys" checked>女性
+                    <input type="radio" name="gendar" value="mens">男性
+                </div>
+                <div class="name-d">
+                    生年月日　記入例：19900101<br>
+                    <input type="text" name="birth" placeholder="生年月日">
+                </div>
+                <div class="name-d">
+                    お問い合わせの具体的な内容<br>
+                    <textarea name="content"></textarea>
+                </div>
+                <div>
+                    <input type="submit" name="submit" value="送信">
+                </div>
+            </form>
+        </section>
+    </main>
+    <!-- フッター -->
+    <footer>
+        <small>yasuko tatebayashi Portfolio 2021</small>
+    </footer>
+</body>
+</html>
