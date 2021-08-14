@@ -131,20 +131,8 @@ input[name="email"] {
     width: 30em;
 }
 
-input[name="postal1"] {
-    width: 3em;
-}
-
-input[name="postal2"] {
-    width: 5em;
-}
-
 input[name="address"] {
     width: 30em;
-}
-
-input[name="birth"] {
-    width: 10em;
 }
 
 textarea {

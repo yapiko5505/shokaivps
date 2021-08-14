@@ -74,23 +74,23 @@
         <p id="contact"></p>
         <section id="contact-contents">
             <h2>お問い合わせ</h2>
-            <form method="POST" action="check2.php">
+            <form method="post" action="phpside/check.php">
+                @csrf
                 <div class="name-d">
                     氏名<br>
                     <input type="text" name="name" placeholder="氏名">
                 </div>
                 <div class="name-d">
-                    Email<br>
-                    <input type="text" name="email" placeholder="Email">
+                    メールアドレス<br>
+                    <input type="text" name="email" placeholder="メールアドレス">
                 </div>
                 <div class="name-d">
-                    電話番号　記入例：09012345678<br>
+                    電話番号　記入例：090-1234-5678<br>
                     <input type="text" name="phone" placeholder="電話番号">
                 </div>
                 <div class="name-d">
-                    郵便番号<br>
-                    <input type="text" name="postal1" placeholder="000">-
-                    <input type="text" name="postal2" placeholder="0000">
+                    郵便番号　記入例：000-0000<br>
+                    <input type="text" name="postal" placeholder="000-0000">
                 </div>
                 <div class="name-d">
                     住所<br>
