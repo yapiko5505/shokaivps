@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>shokaivps</title>
 </head>
 <body>
     <?php
@@ -95,19 +95,19 @@
 
         if($name==''|| $email==''|| $phone=='' || $postal=='' || $address=='' || $gendar=='' || $birth==''|| $content=='')
         {
-            echo '<form method="post" action="phpside/thanks.php">';
+            echo '<form>';
             echo '<input type="button" onclick="history.back()" value="戻る">';
             echo '</form>';
         } else {
              echo '<form method="post" action="thanks.php">';
-             echo '<input type="name" type="hidden" value="'.$name.'">';
-             echo '<input type="email" type="hidden" value="'.$email.'">';
-             echo '<input type="phone" type="hidden" value="'.$phone.'">';
-             echo '<input type="postal" type="hidden" value="'.$postal.'">';
-             echo '<input type="address" type="hidden" value="'.$address.'">';
-             echo '<input type="gendar" type="hidden" value="'.$gendar.'">';
-             echo '<input type="birth" type="hidden" value="'.$birth.'">';
-             echo '<input type="content" type="hidden" value="'.$content.'">';
+             echo '<input name="name" type="hidden" value="'.$name.'">';
+             echo '<input name="email" type="hidden" value="'.$email.'">';
+             echo '<input name="phone" type="hidden" value="'.$phone.'">';
+             echo '<input name="postal" type="hidden" value="'.$postal.'">';
+             echo '<input name="address" type="hidden" value="'.$address.'">';
+             echo '<input name="gendar" type="hidden" value="'.$gendar.'">';
+             echo '<input name="birth" type="hidden" value="'.$birth.'">';
+             echo '<input name="content" type="hidden" value="'.$content.'">';
 
              echo '<input type="button" onclick="history.back()" value="戻る">';
              echo '<input type="submit" value="OK">';
