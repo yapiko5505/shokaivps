@@ -16,7 +16,7 @@
                 $password='';
 
         try{
-                $dbh=new PDO($dbh, $user, $password);
+                $dbh=new PDO($dsn, $user, $password);
                 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                 $sql='SELECT id, name FROM shokai_staffs WHERE id=?';
