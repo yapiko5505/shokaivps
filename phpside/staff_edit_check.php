@@ -1,3 +1,19 @@
+<?php
+    session_start();
+    session_regenerate_id(true);
+    if(isset($_SESSION['login'])==false)
+    {
+        echo 'ログインされていません。';
+        echo '<a href="../phplogin/staff_login.html">ログイン画面へ</a>';
+        exit();
+    } 
+    else
+    {
+        echo $_SESSION['staff_name'];
+        echo 'さんログイン中<br>';
+        echo '<br>';
+    }
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -9,7 +25,9 @@
 <body>
     <?php
 
-        // $post=sanitize($_POST);
+        require_once('../kansu/common.php');
+
+        $post=sanitize($_POST);
         $staff_id=$_POST['id'];
         $staff_name=$post['staff_name'];
         $staff_pass=$post['password'];
@@ -38,11 +56,12 @@
         } else {
             $staff_pass=md5($staff_pass);
             echo '<form method="post" action="staff_edit_done.php">';
-            echo '<form method="post" name="id" value="'.$staff_id.'">';
+            echo '<input type="hidden" name="id" value="'.$staff_id.'">';
             echo '<input type="hidden" name="staff_name" value="'.$staff_name.'">';
             echo '<input type="hidden" name="password" value="'.$staff_pass.'">';
             echo '<br>';
             echo '<input type="button" onclick="history.back()" value="戻る">';
+            echo '<input type="submit" value="OK">';
             echo '</form>';
         }
     

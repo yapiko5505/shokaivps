@@ -9,6 +9,9 @@
 <body>
     <?php
 
+            require_once('../kansu/common.php');
+
+            $post=sanitize($_POST);
             $name=$_POST['name'];
             $email=$_POST['email'];
             $phone=$_POST['phone'];
@@ -21,16 +24,6 @@
             $dsn='mysql:dbname=shokai;host=localhost';
             $user='root';
             $password='';
-
-
-            $name=htmlspecialchars($name);
-            $email=htmlspecialchars($email);
-            $phone=htmlspecialchars($phone);
-            $postal=htmlspecialchars($postal);
-            $address=htmlspecialchars($address);
-            $gendar=htmlspecialchars($gendar);
-            $birth=htmlspecialchars($birth);
-            $content=htmlspecialchars($content);
         
         try 
         {

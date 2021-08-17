@@ -9,6 +9,9 @@
 <body>
     <?php
 
+        require_once('../kansu/common.php');
+
+        $post=sanitize($_POST);
         $name=$_POST['name'];
         $email=$_POST['email'];
         $phone=$_POST['phone'];
@@ -18,14 +21,6 @@
         $birth=$_POST['birth'];
         $content=$_POST['content'];
 
-        $name=htmlspecialchars($name);
-        $email=htmlspecialchars($email);
-        $phone=htmlspecialchars($phone);
-        $postal=htmlspecialchars($postal);
-        $address=htmlspecialchars($address);
-        $gendar=htmlspecialchars($gendar);
-        $birth=htmlspecialchars($birth);
-        $content=htmlspecialchars($content);
 
         if($name=='') {
             echo '氏名が入力されていません。<br>';
